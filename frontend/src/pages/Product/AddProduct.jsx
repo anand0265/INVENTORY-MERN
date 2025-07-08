@@ -33,7 +33,7 @@ const AddProduct = () => {
   const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    await axios.post('http://localhost:5000/api/products/add', formData);
+    await axios.post('https://inventory-mern-oh02.onrender.com/api/products/add', formData);
     toast.success('Product added!');
     setTimeout(()=>{
   navigate(-1);
