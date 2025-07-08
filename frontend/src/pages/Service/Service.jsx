@@ -28,7 +28,7 @@ const Service = () => {
   const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    await axios.post('http://localhost:5000/api/service/add', formData);
+    await axios.post('https://inventory-mern-oh02.onrender.com/api/service/add', formData);
     toast.success('Services added!');
     setTimeout(()=>{
   navigate('/service-list');
