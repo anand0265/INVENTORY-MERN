@@ -12,7 +12,7 @@ const cors = require('cors');
 // }));
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://inventory-mern-oh02.onrender.com/',
+  'https://inventory-mern-frontend.onrender.com/',
 ];
 
 app.use(cors({
