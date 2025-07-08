@@ -17,9 +17,10 @@ const cors = require('cors');
 //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 //   credentials: true
 // }));
+
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://inventory-mern-frontend.onrender.com/',
+  'https://inventory-mern-frontend.onrender.com',
 ];
 
 app.use(cors({
@@ -33,6 +34,11 @@ app.use(cors({
   credentials: true,
 }));
 
+// ✅ Handle preflight requests (OPTIONS method)
+app.options('*', cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 // Must come BEFORE routes
 
 
