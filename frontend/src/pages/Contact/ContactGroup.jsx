@@ -26,7 +26,7 @@ const ContactGroup = () => {
   const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    await axios.post('http://localhost:5000/api/contact/group/add', formData);
+    await axios.post('https://inventory-mern-oh02.onrender.com/api/contact/group/add', formData);
     toast.success('Contact Group added!');
     setTimeout(()=>{
   navigate('/contact-group-list');
