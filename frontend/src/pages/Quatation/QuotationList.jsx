@@ -24,7 +24,7 @@ const InvoiceList = () => {
   useEffect(() => {
     const fetchInvoices = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/quotation/');
+        const res = await axios.get('https://inventory-mern-oh02.onrender.com/api/quotation/');
         setRows(res.data);
       } catch (err) {
         console.error('❌ Failed to fetch invoices', err);
