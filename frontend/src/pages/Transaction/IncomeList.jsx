@@ -23,7 +23,7 @@ const IncomeList = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/re-income/');
+      const res = await axios.get('https://inventory-mern-oh02.onrender.com/api/re-income/');
       setProducts(res.data);
       setFiltered(res.data);
     } catch (err) {
@@ -36,7 +36,7 @@ const IncomeList = () => {
     if (!confirm) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/re-income/delete/${productId}`);
+      await axios.delete(`https://inventory-mern-oh02.onrender.com/api/re-income/delete/${productId}`);
       toast.success('Deleted successfully');
       fetchProducts();
     } catch (error) {
