@@ -8,7 +8,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/users/forgot-password', { email });
+      await axios.post('https://inventory-mern-oh02.onrender.com/api/users/forgot-password', { email });
       toast.success('Reset link sent to your email');
     } catch (err) {
       toast.error(err.response.data.message || 'Error occurred');
