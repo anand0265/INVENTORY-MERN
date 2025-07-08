@@ -50,7 +50,7 @@ const AddAccount = () => {
     const payload = { ...formData };
 
     const response = await axios.post(
-      'http://localhost:5000/api/account/add',
+      'https://inventory-mern-oh02.onrender.com/api/account/add',
       payload
     );
 
