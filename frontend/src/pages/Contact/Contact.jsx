@@ -51,7 +51,7 @@ const Contact = () => {
       if (imageFile) payload.append('image', imageFile);
       payload.append('loginEnabled', loginEnabled);
 
-      const response = await axios.post('http://localhost:5000/api/contacts/add', payload, {
+      const response = await axios.post('https://inventory-mern-oh02.onrender.com/api/contacts/add', payload, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
