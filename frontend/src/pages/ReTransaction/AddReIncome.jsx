@@ -33,7 +33,7 @@ const handleSubmit=async(e)=>{
     const payload = {...formData}
 
     const response =await axios.post(
-      'http://localhost:5000/api/re-income/add',
+      'https://inventory-mern-oh02.onrender.com/api/re-income/add',
         payload
     )
        toast.success('Income Added Successfully');
