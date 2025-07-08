@@ -29,8 +29,8 @@ const AddPurchase = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productRes = await axios.get('http://localhost:5000/api/products/');
-        const supplierRes = await axios.get('http://localhost:5000/api/supplier/');
+        const productRes = await axios.get('https://inventory-mern-oh02.onrender.com/api/products/');
+        const supplierRes = await axios.get('https://inventory-mern-oh02.onrender.com/api/supplier/');
         setProductsList(productRes.data);
         setSuppliers(supplierRes.data);
       } catch (err) {
@@ -100,7 +100,7 @@ const AddPurchase = () => {
         note: formData.note
       };
 
-      const res = await axios.post('http://localhost:5000/api/purchase/create', payload);
+      const res = await axios.post('https://inventory-mern-oh02.onrender.com/api/purchase/create', payload);
       alert('Purchase saved successfully');
       navigate(`/purchase-receipt/${res.data._id}`);
     } catch (err) {
