@@ -83,7 +83,7 @@ const AddNewUser = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/user/create', data, {
+      const res = await axios.post('https://inventory-mern-oh02.onrender.com/api/user/create', data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },
