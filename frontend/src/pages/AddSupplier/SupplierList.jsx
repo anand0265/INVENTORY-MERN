@@ -23,7 +23,7 @@ const  SupplierList = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/supplier/');
+      const res = await axios.get('https://inventory-mern-oh02.onrender.com/api/supplier/');
       setProducts(res.data);  // FIXED
     setFiltered(res.data);
     } catch (err) {
@@ -36,7 +36,7 @@ const  SupplierList = () => {
     if (!confirm) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/supplier/delete/${supplierId}`);
+      await axios.delete(`https://inventory-mern-oh02.onrender.com/api/supplier/delete/${supplierId}`);
       toast.success('Deleted successfully');
       fetchProducts();
     } catch (error) {
