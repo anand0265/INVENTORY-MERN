@@ -14,7 +14,7 @@ const QuotationReceipt = () => {
   useEffect(() => {
     const fetchQuotation = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/quotation/${id}`);
+        const res = await axios.get(`https://inventory-mern-oh02.onrender.com/api/quotation/${id}`);
         console.log("Fetched Quotation:", res.data);
         setQuotation(res.data);
       } catch (err) {
