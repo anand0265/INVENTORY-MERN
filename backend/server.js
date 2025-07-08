@@ -2,9 +2,7 @@ const express=require('express')
 
 const app=express();
 const dotenv = require('dotenv');
-app.use(express.json()); 
-app.use(express.urlencoded({ extended: true }));
-dotenv.config();
+
 
 const cors = require('cors');
 // app.use(cors({
@@ -14,7 +12,7 @@ const cors = require('cors');
 // }));
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://inventory-mern-oh02.onrender.com/', // ✅ your actual frontend
+  'https://inventory-mern-oh02.onrender.com/',
 ];
 
 app.use(cors({
@@ -22,11 +20,20 @@ app.use(cors({
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(new Error('CORS not allowed for this origin'));
     }
   },
-  credentials: true, // ✅ required for cookies/JWT headers
+  credentials: true,
 }));
+
+// Must come BEFORE routes
+app.options('*', cors()); // Handle preflight
+
+// Then other middleware
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
+dotenv.config();
 const connectionDB = require('./db/db')
 
 app.get('/',(req,res)=>{
