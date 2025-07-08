@@ -23,7 +23,7 @@ const ServiceList = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/service/');
+      const res = await axios.get('https://inventory-mern-oh02.onrender.com/api/service/');
       setProducts(res.data.service);  // FIXED
     setFiltered(res.data.service);
     } catch (err) {
@@ -36,7 +36,7 @@ const ServiceList = () => {
     if (!confirm) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/service/delete/${contactId}`);
+      await axios.delete(`https://inventory-mern-oh02.onrender.com/api/service/delete/${contactId}`);
       toast.success('Deleted successfully');
       fetchProducts();
     } catch (error) {
