@@ -12,12 +12,21 @@ const cors = require('cors');
 //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 //   credentials: true
 // }));
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://inventory-mern-oh02.onrender.com/', // ✅ your actual frontend
+];
+
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://inventory-mern-frontend.onrender.com/'],
-  credentials: true,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // ✅ required for cookies/JWT headers
 }));
-
-
 const connectionDB = require('./db/db')
 
 app.get('/',(req,res)=>{
