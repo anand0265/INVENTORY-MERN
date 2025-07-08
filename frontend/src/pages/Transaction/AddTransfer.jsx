@@ -38,7 +38,7 @@ const AddTransfer = () => {
   }
 
   try {
-    const res = await axios.post('http://localhost:5000/api/transfer/add', formData);
+    const res = await axios.post('https://inventory-mern-oh02.onrender.com/api/transfer/add', formData);
     toast.success('Transfer added successfully');
 
     // Clear form after 3 seconds
