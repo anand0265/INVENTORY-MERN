@@ -48,9 +48,9 @@ const CreateInvoice = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productRes = await axios.get('http://localhost:5000/api/products/');
-        const serviceRes = await axios.get('http://localhost:5000/api/service/');
-        const clientRes = await axios.get('http://localhost:5000/api/client/');
+        const productRes = await axios.get('https://inventory-mern-oh02.onrender.com/api/products/');
+        const serviceRes = await axios.get('https://inventory-mern-oh02.onrender.com/api/service/');
+        const clientRes = await axios.get('https://inventory-mern-oh02.onrender.com/api/client/');
         setProductsList(productRes.data);
        setServices(Array.isArray(serviceRes.data.service) ? serviceRes.data.service : []);
 
@@ -118,7 +118,7 @@ const CreateInvoice = () => {
           grand_total: parseFloat(totalSubtotal) // <-- Include this
       };
 
-      const res = await axios.post('http://localhost:5000/api/invoice/add', payload);
+      const res = await axios.post('https://inventory-mern-oh02.onrender.com/api/invoice/add', payload);
       toast.success('Invoice saved successfully');
       setTimeout(()=>{
  usenavigate(`/invoice-receipt/${res.data._id}`);
