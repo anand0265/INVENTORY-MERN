@@ -16,7 +16,7 @@ const IncomeCalendar = () => {
   useEffect(() => {
     const fetchIncome = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/re-income/');
+        const res = await axios.get('https://inventory-mern-oh02.onrender.com/api/re-income/');
         const events = res.data.map((item) => ({
           title: `${item.incomeType} - $ ${parseFloat(item.amount).toFixed(2)}`,
           date: item.date,
