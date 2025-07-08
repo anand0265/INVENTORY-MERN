@@ -37,7 +37,7 @@ const navigate = useNavigate();
     console.log(' Sending payload:', payload);
 
     const response = await axios.post(
-      'http://localhost:5000/api/re-expense/add',
+      'https://inventory-mern-oh02.onrender.com/api/re-expense/add',
       payload,
       
     );
