@@ -21,7 +21,7 @@ const InvoiceReceipt = () => {
   useEffect(() => {
     const fetchInvoice = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/invoice/${id}`);
+        const res = await axios.get(`https://inventory-mern-oh02.onrender.com/api/invoice/${id}`);
         setInvoice(res.data);
       } catch (err) {
         console.error('Failed to fetch invoice', err);
