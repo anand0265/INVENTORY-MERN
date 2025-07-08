@@ -7,11 +7,16 @@ app.use(express.urlencoded({ extended: true }));
 dotenv.config();
 
 const cors = require('cors');
+// app.use(cors({
+//   origin: 'http://localhost:5173',
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   credentials: true
+// }));
 app.use(cors({
-  origin: 'http://localhost:5173',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
+  origin: ['http://localhost:5173', 'https://inventory-mern-frontend.onrender.com/'],
+  credentials: true,
 }));
+
 
 const connectionDB = require('./db/db')
 
