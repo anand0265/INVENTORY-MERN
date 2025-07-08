@@ -43,9 +43,9 @@ const Quotation = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productRes = await axios.get('http://localhost:5000/api/products/');
-        const serviceRes = await axios.get('http://localhost:5000/api/service/');
-        const clientRes = await axios.get('http://localhost:5000/api/client/');
+        const productRes = await axios.get('https://inventory-mern-oh02.onrender.com/api/products/');
+        const serviceRes = await axios.get('https://inventory-mern-oh02.onrender.com/api/service/');
+        const clientRes = await axios.get('https://inventory-mern-oh02.onrender.com/api/client/');
         setProductsList(productRes.data);
         setServices(Array.isArray(serviceRes.data.service) ? serviceRes.data.service : []);
         setClients(clientRes.data);
@@ -135,7 +135,7 @@ const Quotation = () => {
         grand_total: parseFloat(grandTotal)
       };
 
-      const res = await axios.post('http://localhost:5000/api/quotation/add', payload);
+      const res = await axios.post('https://inventory-mern-oh02.onrender.com/api/quotation/add', payload);
       toast.success('Quotation saved successfully');
       setTimeout(() => {
         usenavigate(`/quotation-receipt/${res.data._id}`);
