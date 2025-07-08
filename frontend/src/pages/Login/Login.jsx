@@ -26,7 +26,10 @@ const Login = () => {
       const res = await axios.post('https://inventory-mern-oh02.onrender.com/api/users/login', {
         email,
         password,
-      });
+      },
+                                  {
+    withCredentials: true,  // ⬅️ important
+  });
 
       toast.success(res.data.message || 'Login successful ✅');
 
