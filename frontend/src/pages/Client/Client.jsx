@@ -31,7 +31,7 @@ const Client = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:5000/api/client/add', formData);
+      await axios.post('https://inventory-mern-oh02.onrender.com/api/client/add', formData);
       toast.success('Client added successfully!');
       setTimeout(() => navigate(-1), 2000); // go back after 2s
     } catch (error) {
