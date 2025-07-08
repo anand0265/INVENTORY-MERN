@@ -7,6 +7,9 @@ app.use(express.urlencoded({ extended: true }));
 dotenv.config();
 const connectionDB = require('./db/db')
 
+// Then other middleware
+app.use(express.json());
+
 
 const cors = require('cors');
 // app.use(cors({
@@ -31,10 +34,9 @@ app.use(cors({
 }));
 
 // Must come BEFORE routes
-app.options('*', cors()); // Handle preflight
 
-// Then other middleware
-app.use(express.json());
+
+
 
 
 app.get('/',(req,res)=>{
