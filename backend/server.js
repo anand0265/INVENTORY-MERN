@@ -34,12 +34,7 @@ app.use(cors({
   credentials: true,
 }));
 
-// ✅ Handle preflight requests (OPTIONS method)
-app.options('*', cors({
-  origin: allowedOrigins,
-  credentials: true,
-}));
-// Must come BEFORE routes
+
 
 
 
