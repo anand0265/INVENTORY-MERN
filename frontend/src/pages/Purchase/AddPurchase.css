@@ -1,0 +1,114 @@
+/* Layout Containers */
+.purchase-container {
+  display: flex;
+  height: 100vh;
+  /* background-color: #f4f6f8; */
+}
+
+.main-content {
+  flex: 1;
+  /* padding: 20px; */
+  overflow-y: auto;
+}
+
+/* Sidebar should take up fixed width */
+.sidebar {
+  width: 250px;
+  /* background-color: #1a237e; */
+  color: white;
+  min-height: 160vh;
+}
+
+/* Purchase Form Styling */
+.purchase-form {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: -60px;
+  border-top: 2px solid red;
+}
+
+.purchase-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #1a237e;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.input-group input,
+.input-group select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Table Styles */
+.purchase-form table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.purchase-form th,
+.purchase-form td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.purchase-form input[type="number"],
+.purchase-form input[type="text"] {
+  width: 100%;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 80px;
+}
+
+.save-btn {
+  background-color: #1a237e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 120px;
+}
+
+.save-btn:hover {
+  background-color: #0f1546;
+}

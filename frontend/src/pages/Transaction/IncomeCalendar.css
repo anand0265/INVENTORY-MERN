@@ -1,0 +1,68 @@
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.sidebar-container {
+  width: 250px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+}
+
+.calendar-container {
+  flex: 1;
+  padding: 20px;
+  margin-left: -40px;
+  box-shadow: 2px 2px 4px black;
+  margin-top: 20px;
+}
+.calendar-container.no-sidebar {
+  margin-left: 30px; /* when sidebar is hidden */
+}
+
+.calendar-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* FullCalendar styling overrides (optional) */
+.fc .fc-toolbar-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: black;
+
+}
+
+/* Make day headers (Sun, Mon, etc.) black */
+.fc-col-header-cell-cushion {
+  color: black !important;
+  font-weight: 600;
+}
+
+
+.fc-event {
+  font-size: 12px;
+  background-color: #3f51b5;
+  border: none;
+  color:  black;
+}
+
+
+/*  */
+/* Make calendar events smaller and wrap nicely */
+.fc-event {
+  font-size: 12px;
+  padding: 2px 4px;
+  white-space: normal !important;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+/* Ensure event container doesn't overflow */
+.fc .fc-daygrid-event {
+  max-height: 100%;
+  overflow: hidden;
+}

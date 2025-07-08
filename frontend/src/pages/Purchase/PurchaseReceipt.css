@@ -1,0 +1,159 @@
+/* .receipt-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 8px 10px;
+  text-align: left;
+}
+.summary {
+  text-align: right;
+  margin-top: 20px;
+} */
+
+
+/* Container */
+.receipt-container {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+  color: black;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+.receipt-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #007bff;
+}
+
+.receipt-container h3 {
+  margin-bottom: 5px;
+  color: #343a40;
+}
+
+.receipt-container h4 {
+  margin-top: 30px;
+  color: #28a745;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  background: #e9ecef;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.order-info p {
+  margin: 4px 0;
+}
+
+/* Supplier Info */
+.receipt-container p {
+  margin: 4px 0;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+table th, table td {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  text-align: center;
+}
+
+table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Summary */
+.summary {
+  margin-top: 30px;
+  background: #fff3cd;
+  padding: 20px;
+  border-left: 5px solid #ffc107;
+  border-radius: 8px;
+}
+
+.summary p, .summary h3 {
+  margin: 8px 0;
+  color: black;
+}
+
+
+.receipt-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.receipt-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.receipt-buttons button:hover {
+  background-color: #0056b3;
+}
+/* Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .receipt-container,
+  .receipt-container * {
+    visibility: visible;
+  }
+
+  .receipt-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .receipt-buttons {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+.navbar {
+  /* width: 100%; */
+  padding: 12px 20px;
+  background-color: #1d2744;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left  {
+  display: inline;
+  font-weight: bold;
+}
+.navbar-brand{
+    padding-left: 70px;
+     font-size: 30px;
+    
+}
+.menu-icon{
+    margin-left: 80px;
+    font-size: 30px;
+ 
+}
+.menu-icon:hover{
+    cursor: pointer;
+}
+
+.navbar-right  {
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 70px;
+}
+.admin-icon {
+  font-size: 24px;
+}
+
+.admin-name {
+  font-size: 16px;
+  
+}
+

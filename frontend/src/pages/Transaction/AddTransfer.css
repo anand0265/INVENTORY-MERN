@@ -1,0 +1,93 @@
+.contact-layout {
+  display: flex;
+}
+
+
+
+.contact-wrapper {
+    padding: 20px;
+  flex-grow: 1;
+margin-left: 20px;
+margin-right: 50px;
+  background: #fff;
+  margin: 20px;
+ box-shadow: 4px 4px 4px 4px rgba(0.1,1,1,0.1);
+ min-height: 1000px;
+}
+
+.contact-wrapper h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #6c757d;
+}
+
+.contact-form {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.form-section {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  /* color: #444; */
+    color: #6c757d;
+}
+
+.form-control{
+    height: auto;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 450px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+
+
+.form-actions {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.form-actions button {
+  padding: 10px 20px;
+  background: #001f4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.form-actions button i{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.form-actions button:hover{
+    background: blue;
+}
+
+

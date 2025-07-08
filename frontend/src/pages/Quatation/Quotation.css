@@ -1,0 +1,140 @@
+.invoice-page {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+.invoice-container {
+  display: flex;
+  width: 100%;
+}
+
+.invoice-content {
+  flex: 1;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.invoice-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+ 
+}
+
+.add-btn {
+  margin-top: 5px;
+ 
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 120px;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.invoice-table th,
+.invoice-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.invoice-table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+}
+
+.invoice-table input,
+.invoice-table select {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.save-invoice-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 150px;
+}
+
+.save-invoice-btn:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .invoice-content {
+    padding: 15px;
+  }
+}

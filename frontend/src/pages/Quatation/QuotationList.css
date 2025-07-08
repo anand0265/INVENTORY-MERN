@@ -1,0 +1,191 @@
+.purchase-page {
+  display: flex;
+}
+
+.purchase-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.purchase-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.purchase-header h2{
+    color: black;
+}
+
+.add-btn {
+  background-color: #0d1e40;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+.filter-section {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.action-buttons {
+  margin-bottom: 10px;
+}
+thead tr th{
+    color: black;
+}
+
+tbody tr td{
+    color: black;
+}
+
+
+.action-buttons button {
+  margin-right: 10px;
+  padding: 6px 10px;
+  border: none;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.purchase-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.purchase-table th,
+.purchase-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.status {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.status.ordered {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.status.received {
+  background-color: #28a745;
+  color: white;
+}
+
+.status.due {
+  background-color: #dc3545;
+  color: white;
+}
+
+.status.paid {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-btn {
+  background-color: #0d1e40;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 180px; /* fixed width */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 4px;
+  padding: 5px 0;
+  color: black;
+}
+
+.dropdown-menu div {
+  padding: 10px 15px;
+  cursor: pointer;
+  white-space: nowrap;  /* keep text on one line */
+  font-size: 14px;
+}
+
+.dropdown-menu div:hover {
+  background-color: #f0f0f0;
+}
+
+.action-buttons button:hover{
+  background-color: #007bff;
+  color: white;
+}
+.action-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.action-cell {
+  position: relative;
+}
+
+
+/* By default, hide the print-area on screen */
+.print-area {
+  display: none;
+}
+
+/* Show only .print-area and hide everything else during print */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .print-area, .print-area * {
+    visibility: visible !important;
+  }
+
+  .print-area {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: white;
+  }
+
+  .screen-only {
+    display: none !important;
+  }
+}
+
+
+.filter-section{
+  display: flex;
+  flex-direction: column;
+ 
+}

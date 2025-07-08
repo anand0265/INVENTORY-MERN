@@ -1,0 +1,46 @@
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #f7f9fc;
+  padding: 20px;
+ box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.admin-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-avatar {
+  font-size: 60px;
+  color: gray;
+}
+
+.admin-names {
+  font-weight: bold;
+  margin-top: 8px;
+  color: black;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  margin: 6px 0;
+  transition: background 0.2s;
+}
+
+.nav-links a:hover {
+  background: #e6ecff;
+  color: #2c67f2;
+}
+
+#NAVI{
+  color: black;
+}
