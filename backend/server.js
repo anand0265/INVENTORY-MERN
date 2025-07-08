@@ -3,6 +3,10 @@ const express=require('express')
 const app=express();
 const dotenv = require('dotenv');
 
+app.use(express.urlencoded({ extended: true }));
+dotenv.config();
+const connectionDB = require('./db/db')
+
 
 const cors = require('cors');
 // app.use(cors({
@@ -32,9 +36,6 @@ app.options('*', cors()); // Handle preflight
 // Then other middleware
 app.use(express.json());
 
-app.use(express.urlencoded({ extended: true }));
-dotenv.config();
-const connectionDB = require('./db/db')
 
 app.get('/',(req,res)=>{
     try {
