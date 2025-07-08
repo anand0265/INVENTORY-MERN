@@ -15,7 +15,7 @@ const PurchaseReceipt = () => {
   useEffect(() => {
     const fetchPurchase = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/purchase/${id}`);
+        const res = await axios.get(`https://inventory-mern-oh02.onrender.com/api/purchase/${id}`);
         setPurchase(res.data);
       } catch (err) {
         console.error('❌ Fetch failed:', err);
