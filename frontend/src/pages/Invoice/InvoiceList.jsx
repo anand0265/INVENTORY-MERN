@@ -24,7 +24,7 @@ const InvoiceList = () => {
   useEffect(() => {
     const fetchSuppliers = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/client/');
+        const res = await axios.get('https://inventory-mern-oh02.onrender.com/api/client/');
         setSuppliers(res.data);
       } catch (err) {
         console.error('❌ Failed to fetch suppliers', err);
@@ -36,7 +36,7 @@ const InvoiceList = () => {
   useEffect(() => {
     const fetchInvoices = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/invoice/');
+        const res = await axios.get('https://inventory-mern-oh02.onrender.com/api/invoice/');
         setRows(res.data);
       } catch (err) {
         console.error('❌ Failed to fetch invoices', err);
