@@ -10,7 +10,7 @@ const ResetPassword = () => {
   const handleReset = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5000/api/users/reset-password/${token}`, { password });
+      await axios.post(`https://inventory-mern-oh02.onrender.com/api/users/reset-password/${token}`, { password });
       toast.success('Password updated successfully');
     } catch (err) {
       toast.error(err.response.data.message || 'Error resetting password');
