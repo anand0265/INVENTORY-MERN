@@ -70,7 +70,7 @@ usenavigate('/supplier-list');
       });
 
       const response = await axios.post(
-        'http://localhost:5000/api/supplier/add',
+        'https://inventory-mern-oh02.onrender.com/api/supplier/add',
         payload,
         {
           headers: {
